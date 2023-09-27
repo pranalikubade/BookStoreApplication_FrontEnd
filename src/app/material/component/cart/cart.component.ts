@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Book } from 'src/app/model/book.module';
 import { BookService } from 'src/app/book.service';
+import { Book } from 'src/app/model/book.module';
+
 
 @Component({
   selector: 'app-cart',
@@ -29,11 +30,11 @@ export class CartComponent {
   constructor(private bookService:BookService){}
 
   ngOnInit(): void {
-    // this.bookService.getBooks().subscribe(response =>{
-    //   this.books=response;
-    //   console.log(this.books);
-        this.numberOfBooks=this.books.length;
-      //})
+      this.bookService.getBooks().subscribe(response =>{
+        this.books=response;
+        console.log(this.books);
+        // this.numberOfBooks=this.books.length;
+      })
   }
 
   added:boolean=true;

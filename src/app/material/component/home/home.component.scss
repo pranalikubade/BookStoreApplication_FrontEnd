@@ -11,13 +11,19 @@ $button-background-color: #82a70c;
 
 }
 
-  .header-content {
+.header-content {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;    
+    // width: 80%;
+    // margin: 0 auto;
+    // padding-bottom: 25px;
     display: flex;
+    flex-wrap :wrap;
+    margin-left: 50px;
+    margin-right: 50px;
     flex-direction: row;
-    justify-content: space-between;    
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 25px;
+    align-items: center;
   }
 
   .card-header{
@@ -27,11 +33,13 @@ $button-background-color: #82a70c;
     rgb(171, 175, 179);
   }
 .example-card {
-  display: flex;
-  padding: 10px;
-  margin: 20px;
-  height: 315px;
-  width: 233px;
+  // display: flex;
+  // padding: 10px;
+  margin: 30px;
+  // height: 315px;
+  width: 200px;
+  box-shadow :2px 2px 5px #aaa;
+  border :1px solid #ccc;
 }
 
 .cardbody {

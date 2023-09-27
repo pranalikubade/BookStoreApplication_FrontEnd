@@ -1,6 +1,9 @@
 
 
 export class Book {
+  static book_id(book_id: any) {
+    throw new Error('Method not implemented.');
+  }
   bookId!:number;
   bookName!:string;
   authorName!:string;
@@ -8,4 +11,5 @@ export class Book {
   bookImg!:string;
   price!:number;
   quantity!:number;
+  static addedToBag: any;
 }

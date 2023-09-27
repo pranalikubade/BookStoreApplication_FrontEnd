@@ -1,0 +1,48 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+    background-color: rgb(126, 16, 16);
+}
+
+.row-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+img{
+    height: 40px;
+}
+h3{
+    color: antiquewhite;
+    font-size: 30px;
+    // margin-right: 480px;
+}
+input{
+    padding: 8px;
+    border-radius: 3px;
+    // margin-right: 100px;
+    padding-right: 250px;
+}
+.span{
+    margin-left: 200px;
+    color: aliceblue;
+}
+button{
+    font-size: 20px;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-icon{
+    background-color: white;
+    padding: 4px;
+}
