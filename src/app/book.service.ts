@@ -6,13 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookService {
-  getBooks() {
-    throw new Error('Method not implemented.');
+  constructor(private http:HttpClient) { }
+
+  getBooks(): Observable<any>{
+    return this.http.get('http://localhost:8090/book/allBooks');
   }
 
-  constructor(private http:HttpClient) { }
-  // getBooks(): Observable<any>{
-  //   return this.http.get('http://localhost:8080/book/allBooks');
-  // }
+  getBookById(id:number): Observable<any>{
+    return this.http.get('http://localhost:8090/book/getBookById'+id);
+  }
+  
+  getBookByName(search:string): Observable<any>{
+    return this.http.get('http://localhost:8090/book/getbybookname'+name)
+  }
+  
 
 }

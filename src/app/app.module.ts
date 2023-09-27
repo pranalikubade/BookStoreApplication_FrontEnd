@@ -8,23 +8,33 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularMaterialModule } from './material/@angular/material/material.module';
 
-import { FormComponent } from './material/component/form/form.component';
+import { HeaderComponent } from './material/component/header/header.component';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './material/component/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CartComponent } from './material/component/cart/cart.component';
+
 import { LoginComponent } from './material/component/login/login.component';
+import { RegisterComponent } from './material/component/component/register/register.component';
+import { CartComponent } from './material/component/cart/cart.component';
+import { OrderComponent } from './material/component/order/order.component';
+
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
     HomeComponent,
-    CartComponent,
+    HeaderComponent,
     LoginComponent,
+    RegisterComponent,
+    CartComponent,
+    OrderComponent,
+    
+   
    
   
   ],
@@ -34,7 +44,8 @@ import { LoginComponent } from './material/component/login/login.component';
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

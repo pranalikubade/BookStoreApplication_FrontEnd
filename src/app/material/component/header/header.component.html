@@ -1,0 +1,16 @@
+<header>
+    <div class="row-content">
+        <img src="../assets/education.svg" alt="">
+        <h3>BookStore</h3>
+        &nbsp;&nbsp;&nbsp;
+        <mat-icon>search</mat-icon>
+        <input type="text" placeholder="search for book" (input)="search">
+        <span class="span">Cart</span>
+        <div  class="cart">
+            <span>{{cartItemCount}}</span>
+        <a routerLink="/cart">
+        <img src="../assets/supermarket.svg" alt="" ></a>
+        </div>
+        <button mat-button style="margin-left: 150px;" color="primary"><b>Logout</b></button>
+    </div>
+</header>
