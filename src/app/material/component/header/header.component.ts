@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Book } from 'src/app/model/book/book.model';
+import { Book } from 'src/app/model/book.module';
 import { BookService } from 'src/app/book.service';
 import { CartService } from 'src/app/cart.service';
 

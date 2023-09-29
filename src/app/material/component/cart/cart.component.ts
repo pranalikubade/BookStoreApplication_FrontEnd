@@ -14,6 +14,7 @@ export class CartComponent {
 
   public cartItems:number=1;
   numberOfBooks:number=20;
+Items: any;
   
  increase(){
   if(this.cartItems<this.numberOfBooks){

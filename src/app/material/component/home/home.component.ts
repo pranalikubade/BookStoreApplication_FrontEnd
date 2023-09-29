@@ -10,12 +10,35 @@ import { Book } from 'src/app/model/book/book.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  numberOfBooks=0;
+  numberOfBooks = 0;
 
   public books:Book[]=[];
   order: string[] = [
    "low-high","high-low","newest Arrivals"
   ];
+
+  selectedSortOption: string;
+  
+  
+  
+  // Function to perform the sorting based on the selected option
+  sortBooks() {
+    switch (this.selectedSortOption) {
+      case "low-high":
+        this.books.sort((a, b) => a.bookPrice - b.bookPrice);
+        break;
+      case "high-low":
+        this.books.sort((a, b) => b.bookPrice - a.bookPrice);
+        break;
+      case "newest Arrivals":
+        // Assuming you have a 'dateAdded' property in your Book class, replace it with your actual property
+        this.books.sort((a, b) => b.dateAdded.getTime() - a.dateAdded.getTime());
+        break;
+      default:
+        break;
+    }
+  }
+  
 
   ngOnInit(): void {
     
@@ -23,14 +46,18 @@ export class HomeComponent implements OnInit{
      console.log("book " + response);
      this.books=response.data;
      console.log("read"+this.books);
-     this.numberOfBooks = this.books.length;
+    this.numberOfBooks = this.books.length;
 
    })}
 
   search:string="";
+  cartItems :any;
   constructor(private bookService:BookService,
-    private cartItems:CartService
-    ){}
+    private cartservice:CartService,  
+    ){
+      this.selectedSortOption = this.order[0];
+      
+    }
 
     
   // ngOnInit(): void {
@@ -49,7 +76,6 @@ export class HomeComponent implements OnInit{
   //     }
   // }
 
-
   onClick(book:Book){
     if (!book.added){
     this.bookService.getBookById(book.Id).subscribe(response => {
@@ -61,7 +87,7 @@ export class HomeComponent implements OnInit{
     book.added=false;
     this.cartItems.decrementItemCount();
     }
-    
     }
+
 
   }

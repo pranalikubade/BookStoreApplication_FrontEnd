@@ -15,7 +15,7 @@ import { HomeComponent } from './material/component/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './material/component/login/login.component';
-import { RegisterComponent } from './material/component/component/register/register.component';
+import { RegisterComponent } from './material/component/register/register.component';
 import { CartComponent } from './material/component/cart/cart.component';
 import { OrderComponent } from './material/component/order/order.component';
 

@@ -1,8 +1,8 @@
+import { DatePipe } from "@angular/common";
+
 export class Book {
-  static added: any;
-  static Id(Id: any) {
-    throw new Error('Method not implemented.');
-  }
+
+  
     Id!:number;
   bookName!:string;
   bookAuthor!:string;
@@ -11,4 +11,8 @@ export class Book {
   bookPrice!:number;
   bookQuantity!:number;
    added: any;
+  dateAdded!: any;
+ 
+
+  
 }

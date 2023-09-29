@@ -1,6 +1,7 @@
 
 
 export class Book {
+  added: any;
   static book_id(book_id: any) {
     throw new Error('Method not implemented.');
   }
